@@ -1,3 +1,7 @@
 from django.contrib import admin
+from core.models import Screen
 
-# Register your models here.
+
+@admin.register(Screen)
+class ScreenAdmin(admin.ModelAdmin):
+    list_display = ['id', 'address', 'resolution', 'diagonal']
